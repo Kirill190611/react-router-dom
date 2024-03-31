@@ -43,3 +43,13 @@
     text-align: center;
     color: white;
 }
+
+.link {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.activeLink {
+    color: aquamarine;
+    text-decoration: none;
+}

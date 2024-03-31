@@ -13,9 +13,12 @@ function App() {
             <div className={styles.header}><h1>HEADER</h1></div>
             <div className={styles.body}>
                 <div className={styles.nav}>
-                    <NavLink to="/page1">Page 1</NavLink>
-                    <NavLink to="/page2">Page 2</NavLink>
-                    <NavLink to="/page3">Page 3</NavLink>
+                    <NavLink to="/page1"
+                             className={({isActive}) => (isActive ? styles.activeLink : styles.link)}>Page 1</NavLink>
+                    <NavLink to="/page2"
+                             className={({isActive}) => (isActive ? styles.activeLink : styles.link)}>Page 2</NavLink>
+                    <NavLink to="/page3"
+                             className={({isActive}) => (isActive ? styles.activeLink : styles.link)}>Page 3</NavLink>
                 </div>
                 <div className={styles.content}>
                     <Routes>
