@@ -80,10 +80,8 @@ function App() {
                                element={<Model/>}/>
 
 
-                        <Route path={PATH.ERROR}
-                               element={<Error404/>}/>
                         <Route path="/*"
-                               element={<Navigate to={PATH.ERROR}/>}/>
+                               element={<Error404/>}/>
                     </Routes>
                 </S.Content>
             </S.Body>
