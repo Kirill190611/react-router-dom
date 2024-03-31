@@ -1,4 +1,25 @@
-.header {
+import styled from "styled-components";
+
+const NavWrapper = styled.div`
+    margin-left: 10px;
+    font-size: 20px;
+
+    & > a {
+        color: #61dafb;
+        text-decoration: none;
+    }
+    
+    & > a.active {
+        color: aquamarine;
+        text-decoration: none;
+    }
+    
+    & > a:hover {
+        color: steelblue;
+    }
+`
+
+const Header = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,13 +28,13 @@
     height: 100px;
     text-align: center;
     color: white;
-}
+`
 
-.body {
+const Body = styled.div`
     display: flex;
-}
+`
 
-.nav {
+const Navigation = styled.nav`
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -22,18 +43,17 @@
     width: 30%;
     color: #282c34;
     font-size: 30px;
+`
 
-}
-
-.content {
+const Content = styled.div`
     background-color: #282c34;
     min-height: 400px;
     width: 70%;
     color: white;
     font-size: 30px;
-}
+`
 
-.footer {
+const Footer = styled.footer`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,14 +62,13 @@
     height: 120px;
     text-align: center;
     color: white;
-}
+`
 
-.link {
-    color: #61dafb;
-    text-decoration: none;
-}
-
-.activeLink {
-    color: aquamarine;
-    text-decoration: none;
+export const S = {
+    NavWrapper,
+    Header,
+    Body,
+    Navigation,
+    Content,
+    Footer,
 }
