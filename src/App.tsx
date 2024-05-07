@@ -2,7 +2,7 @@ import React from 'react';
 import {Adidas} from "./components/pages/Adidas";
 import {Puma} from "./components/pages/Puma";
 import {Abibas} from "./components/pages/Abibas";
-import {Route, Routes, Navigate, NavLink, useParams} from "react-router-dom";
+import {Route, Routes, Navigate, NavLink} from "react-router-dom";
 import {Error404} from "./components/pages/Error404";
 import {S} from "./components/pages/_styles";
 import {Model} from "./components/pages/Model";
