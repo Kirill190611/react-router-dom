@@ -1,6 +1,41 @@
 import React from 'react';
-import {adidasArr} from "../../App";
-import {Link, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import adidasModel1
+    from "../../assets/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.webp";
+import adidasModel2 from "../../assets/Superstar_XLG_Shoes_Black_IG9777_01_standard.webp";
+import adidasModel3 from "../../assets/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.webp";
+
+export type AdidasItemProps = {
+    id: number
+    model: string
+    collection: string
+    price: string
+    picture: string
+}
+
+export const adidasArr: AdidasItemProps[] = [
+    {
+        id: 0,
+        model: 'Adidas ADIFOM TRXN',
+        collection: 'new collection 1',
+        price: '100200$',
+        picture: adidasModel1,
+    },
+    {
+        id: 1,
+        model: 'Adidas ADIFOM SUPER',
+        collection: 'new collection 2',
+        price: '200300$',
+        picture: adidasModel2,
+    },
+    {
+        id: 2,
+        model: 'Adidas ADIFOM SUPERPUPER',
+        collection: 'new collection 3',
+        price: '300400$',
+        picture: adidasModel3,
+    },
+]
 
 export const Adidas = () => {
     return (

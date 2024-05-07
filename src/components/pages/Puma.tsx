@@ -1,9 +1,65 @@
 import React from 'react';
+import pumaModel1
+    from "../../assets/puma/kedy-puma-suede-classic-xxi-374915-01-20-1000x800.jpg";
+import pumaModel2 from "../../assets/puma/krossovki-puma-trinity-open-road-393361-02-3-1000x800.jpg"
+import pumaModel3 from "../../assets/puma/krossovki-puma-trinity-mid-hybrid-leather-393985-02-3-1000x800.jpg";
+import {NavLink} from "react-router-dom";
+
+export type PumaItemProps = {
+    id: number
+    model: string
+    collection: string
+    price: string
+    picture: string
+}
+
+export const pumaArr: PumaItemProps[] = [
+    {
+        id: 0,
+        model: 'Puma Model1',
+        collection: 'new collection 1',
+        price: '100200$',
+        picture: pumaModel1,
+    },
+    {
+        id: 1,
+        model: 'Puma Model2',
+        collection: 'new collection 2',
+        price: '200300$',
+        picture: pumaModel2,
+    },
+    {
+        id: 2,
+        model: 'Puma Model3',
+        collection: 'new collection 3',
+        price: '300400$',
+        picture: pumaModel3,
+    },
+]
 
 export const Puma = () => {
     return (
         <div>
             <h2>PUMA</h2>
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center'
+            }}>
+
+                {
+                    pumaArr.map((puma, index) => {
+                        return (
+                            <NavLink to={`/puma/${puma.id}`}
+                                     key={index}>
+                                <img src={puma.picture}
+                                     alt={`${puma.model} from ${puma.collection}`}
+                                     style={{width: '200px', height: '200px', marginRight: '10px'}}/>
+                            </NavLink>
+                        )
+                    })
+                }
+
+            </div>
             <p>
                 What is Lorem Ipsum?
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
